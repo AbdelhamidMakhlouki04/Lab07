@@ -27,6 +27,7 @@ class DBConnect:
                 )
                 return cls._cnxpool.get_connection()
             except mysql.connector.Error as err:
+                cls._cnxpool = None
                 if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
                     print("Something is wrong with your user name or password")
                     return None
