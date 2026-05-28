@@ -99,10 +99,6 @@ class Model:
             sol.pop()
             count[citta] -= 1
 
-        # ------------------------------------
-        # COSTRUZIONE METEO
-        # ------------------------------------
-
     def _build_meteo(self, mese):
 
         lista = self.getAllSituazioni()
